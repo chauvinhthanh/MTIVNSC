@@ -5,7 +5,7 @@ function doGet() {
 
 function vlookup(searchKey) {
   var sheet = SpreadsheetApp.openByUrl("https://docs.google.com/spreadsheets/d/1Kz0GxLahLLRO6YrAGtWtqARSZnqS3-heRJ41Pry-gkM/edit?userstoinvite=minhtoan77889900%40gmail.com&sharingaction=manageaccess&role=writer&gid=0#gid=0");
-  var sheetdata = sheet.getSheetByName("Thành");
+  var sheetdata = sheet.getSheetByName("Sheet1");
   var data = sheetdata.getDataRange().getValues();
   
   for (var i = 1; i < data.length; i++) { // Bỏ qua hàng tiêu đề
