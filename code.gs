@@ -4,8 +4,9 @@ function doGet() {
 }
 
 function vlookup(searchKey) {
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-  var data = sheet.getDataRange().getValues();
+  var sheet = SpreadsheetApp.openByUrl("https://docs.google.com/spreadsheets/d/1Kz0GxLahLLRO6YrAGtWtqARSZnqS3-heRJ41Pry-gkM/edit?userstoinvite=minhtoan77889900%40gmail.com&sharingaction=manageaccess&role=writer&gid=0#gid=0");
+  var sheetdata = sheet.getSheetByName("Thành");
+  var data = sheetdata.getDataRange().getValues();
   
   for (var i = 1; i < data.length; i++) { // Bỏ qua hàng tiêu đề
     if (data[i][0] == searchKey) { // Giả sử cột đầu tiên là cột tra cứu
